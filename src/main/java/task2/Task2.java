@@ -53,11 +53,13 @@ public class Task2 {
             float hypotinusa = (float) Math.sqrt(Math.pow(secondPointCoordinataA, 2) + Math.pow(secondPointCoordinataB, 2));
             float result = (float) Math.floor(hypotinusa);
             if (radius + centrCircleCoordinataA > result && radius + centrCircleCoordinataB > result) {
+
                 System.out.print(1 + "\r\n");
             } else if (radius + centrCircleCoordinataA == result && radius + centrCircleCoordinataB == result) {
                 System.out.print(0 + "\r\n");
             } else {
                 System.out.print(2 + "\r\n");
+
             }
         }
     }

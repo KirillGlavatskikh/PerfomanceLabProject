@@ -26,6 +26,7 @@ public class Task4 {
 
         double average = Math.round(AverageValue(array));
         int count = 0;
+
         for (int j : array) {
             if (j < average) {
                 count += average - j;
