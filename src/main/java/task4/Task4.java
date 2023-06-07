@@ -1,11 +1,8 @@
 package task4;
 
 import java.io.*;
-import java.nio.CharBuffer;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class Task4 {
 
@@ -29,21 +26,12 @@ public class Task4 {
 
         double average = Math.round(AverageValue(array));
         int count = 0;
-        boolean check = true;
-
-        while (check) {
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] < average) {
-                    array[i] += 1;
-                    count++;
-                }
-                if (array[i] > average) {
-                    array[i] -= 1;
-                    count++;
-                }
-                if (Arrays.stream(array).distinct().count() == 1) {
-                    check = false;
-                }
+        for (int j : array) {
+            if (j < average) {
+                count += average - j;
+            }
+            if (j > average) {
+                count += j - average;
             }
         }
         System.out.println(count);
